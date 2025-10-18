@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- First section with terminal -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-1"></div>
+        <svg class="wire-path" id="wire-svg-1"></svg>
+        
+        <div class="terminal-container">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn red" id="close-btn"></span>
+                        <span class="btn yellow" id="minimize-btn"></span>
+                        <span class="btn green" id="fullscreen-btn"></span>
+                    </div>
+                    <span class="terminal-title">ESP32 Serial Monitor</span>
+                </div>
+                <div class="terminal-body">
+                    <div id="terminal-output"></div>
+                    <div class="cursor">_</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Second section with project blocks -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-2"></div>
+        <svg class="wire-path" id="wire-svg-2"></svg>
+        
+        <div class="projects-grid">
+            
+            <div class="project-size-large" style="background: #f5f5f5; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 12px; overflow: hidden; z-index: 999; position: relative;">
+                <div style="background: #000; color: #fff; height: 200px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; border-bottom: 2px solid rgba(255, 255, 255, 0.3);">
+                    Video Placeholder - IoT Weather Station
+                </div>
+                <div style="background: #fff; padding: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="color: #000; font-size: 18px; font-weight: bold; margin: 0 0 8px 0; font-family: 'Courier New', monospace;">IoT Weather Station</h3>
+                        <span style="background: #28a745; color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; font-family: 'Courier New', monospace;">Active</span>
+                    </div>
+                    <div style="color: #555; line-height: 1.5; margin-bottom: 15px; font-size: 14px;">
+                        Real-time weather monitoring system using ESP32 and multiple sensors. Features web dashboard with live data visualization, mobile notifications, and cloud data storage for historical analysis.
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px;">
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">ESP32</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">React</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">MongoDB</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">WebSocket</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">AWS IoT</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #eee;">
+                        <span style="color: #999; font-size: 11px; font-family: 'Courier New', monospace;">2024</span>
+                        <a href="#" style="color: #000; text-decoration: none; font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold;">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-size-small" style="background: #f5f5f5; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 12px; overflow: hidden; z-index: 999; position: relative;">
+                <div style="background: #000; color: #fff; height: 200px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; border-bottom: 2px solid rgba(255, 255, 255, 0.3);">
+                    Video Placeholder - Smart Home Controller
+                </div>
+                <div style="background: #fff; padding: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="color: #000; font-size: 18px; font-weight: bold; margin: 0 0 8px 0; font-family: 'Courier New', monospace;">Smart Home Controller</h3>
+                        <span style="background: #007bff; color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; font-family: 'Courier New', monospace;">Completed</span>
+                    </div>
+                    <div style="color: #555; line-height: 1.5; margin-bottom: 15px; font-size: 14px;">
+                        Voice-controlled home automation system with custom PCB design. Integrates lighting, temperature, and security systems with mobile app control and voice commands.
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px;">
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">STM32</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">Altium</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">MQTT</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">Flutter</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #eee;">
+                        <span style="color: #999; font-size: 11px; font-family: 'Courier New', monospace;">2023</span>
+                        <a href="#" style="color: #000; text-decoration: none; font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold;">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-size-medium" style="background: #f5f5f5; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 12px; overflow: hidden; z-index: 999; position: relative;">
+                <div style="background: #000; color: #fff; height: 200px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; border-bottom: 2px solid rgba(255, 255, 255, 0.3);">
+                    Video Placeholder - LED Matrix Display
+                </div>
+                <div style="background: #fff; padding: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="color: #000; font-size: 18px; font-weight: bold; margin: 0 0 8px 0; font-family: 'Courier New', monospace;">LED Matrix Display</h3>
+                        <span style="background: #ffc107; color: #000; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; font-family: 'Courier New', monospace;">Demo</span>
+                    </div>
+                    <div style="color: #555; line-height: 1.5; margin-bottom: 15px; font-size: 14px;">
+                        32x32 RGB LED matrix with custom animations and real-time visualization. Features music visualization, text scrolling, and custom pattern creation interface.
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px;">
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">Arduino</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">C++</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">FastLED</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #eee;">
+                        <span style="color: #999; font-size: 11px; font-family: 'Courier New', monospace;">2023</span>
+                        <a href="#" style="color: #000; text-decoration: none; font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold;">Live Demo →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #f5f5f5; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 12px; overflow: hidden; z-index: 999; position: relative;">
+                <div style="background: #000; color: #fff; height: 200px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; border-bottom: 2px solid rgba(255, 255, 255, 0.3);">
+                    Video Placeholder - Robotic Arm Controller
+                </div>
+                <div style="background: #fff; padding: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="color: #000; font-size: 18px; font-weight: bold; margin: 0 0 8px 0; font-family: 'Courier New', monospace;">Robotic Arm Controller</h3>
+                        <span style="background: #28a745; color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; font-family: 'Courier New', monospace;">Development</span>
+                    </div>
+                    <div style="color: #555; line-height: 1.5; margin-bottom: 15px; font-size: 14px;">
+                        6-DOF robotic arm with computer vision integration. Features precise servo control, path planning algorithms, object detection, and pick-and-place automation.
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px;">
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">Raspberry Pi</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">OpenCV</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">Python</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">ROS</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #eee;">
+                        <span style="color: #999; font-size: 11px; font-family: 'Courier New', monospace;">2024</span>
+                        <a href="#" style="color: #000; text-decoration: none; font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold;">View Progress →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #f5f5f5; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 12px; overflow: hidden; z-index: 999; position: relative;">
+                <div style="background: #000; color: #fff; height: 200px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; border-bottom: 2px solid rgba(255, 255, 255, 0.3);">
+                    Video Placeholder - Wireless Sensor Network
+                </div>
+                <div style="background: #fff; padding: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="color: #000; font-size: 18px; font-weight: bold; margin: 0 0 8px 0; font-family: 'Courier New', monospace;">Wireless Sensor Network</h3>
+                        <span style="background: #17a2b8; color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; font-family: 'Courier New', monospace;">Research</span>
+                    </div>
+                    <div style="color: #555; line-height: 1.5; margin-bottom: 15px; font-size: 14px;">
+                        Low-power mesh network for environmental monitoring using LoRa technology. Covers large areas with minimal infrastructure and battery-powered nodes.
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px;">
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">nRF52</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">LoRa</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">FreeRTOS</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">Mesh</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #eee;">
+                        <span style="color: #999; font-size: 11px; font-family: 'Courier New', monospace;">2024</span>
+                        <a href="#" style="color: #000; text-decoration: none; font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold;">Research →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #f5f5f5; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 12px; overflow: hidden; z-index: 999; position: relative;">
+                <div style="background: #000; color: #fff; height: 200px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; border-bottom: 2px solid rgba(255, 255, 255, 0.3);">
+                    Video Placeholder - RFID Access Control
+                </div>
+                <div style="background: #fff; padding: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="color: #000; font-size: 18px; font-weight: bold; margin: 0 0 8px 0; font-family: 'Courier New', monospace;">RFID Access Control</h3>
+                        <span style="background: #6f42c1; color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: bold; font-family: 'Courier New', monospace;">Deployed</span>
+                    </div>
+                    <div style="color: #555; line-height: 1.5; margin-bottom: 15px; font-size: 14px;">
+                        Secure access control system with database logging and real-time monitoring. Features card management, access logs, and integration with existing security systems.
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px;">
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">ESP8266</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">MySQL</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-family: 'Courier New', monospace; font-weight: bold; border: 1px solid #dee2e6;">PHP</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #eee;">
+                        <span style="color: #999; font-size: 11px; font-family: 'Courier New', monospace;">2022</span>
+                        <a href="#" style="color: #000; text-decoration: none; font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold;">Live System →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Third section with more wires -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-3"></div>
+        <svg class="wire-path" id="wire-svg-3"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">More Projects</h2>
+            <p style="color: #666; line-height: 1.6;">Each section has its own set of random wires.</p>
+        </div>
+    </div>
+    
+    <!-- Fourth section -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-4"></div>
+        <svg class="wire-path" id="wire-svg-4"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">Contact</h2>
+            <p style="color: #666; line-height: 1.6;">Continue scrolling to see more breadboard sections.</p>
+        </div>
+    </div>
+    
+    <!-- Fifth section -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-5"></div>
+        <svg class="wire-path" id="wire-svg-5"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">Skills & Technologies</h2>
+            <p style="color: #666; line-height: 1.6;">Hardware and software technologies I work with.</p>
+        </div>
+    </div>
+    
+    <!-- Sixth section -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-6"></div>
+        <svg class="wire-path" id="wire-svg-6"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">Contact & Links</h2>
+            <p style="color: #666; line-height: 1.6;">Get in touch or find me on social platforms.</p>
+        </div>
+    </div>
+    
+    <!-- Seventh section -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-7"></div>
+        <svg class="wire-path" id="wire-svg-7"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">Education & Experience</h2>
+            <p style="color: #666; line-height: 1.6;">Academic background and professional experience.</p>
+        </div>
+    </div>
+    
+    <!-- Eighth section -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-8"></div>
+        <svg class="wire-path" id="wire-svg-8"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">Keep Scrolling...</h2>
+            <p style="color: #666; line-height: 1.6;">The breadboard continues infinitely with new wire patterns.</p>
+        </div>
+    </div>
+    
+    <!-- Ninth section -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-9"></div>
+        <svg class="wire-path" id="wire-svg-9"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">Infinite Electronics</h2>
+            <p style="color: #666; line-height: 1.6;">Like a real breadboard workspace that never ends.</p>
+        </div>
+    </div>
+    
+    <!-- Tenth section -->
+    <div class="page-section">
+        <div class="wire-container" id="wire-container-10"></div>
+        <svg class="wire-path" id="wire-svg-10"></svg>
+        
+        <div style="padding: 40px; text-align: center; margin-top: 30vh;">
+            <h2 style="color: #333; margin-bottom: 20px;">And Beyond...</h2>
+            <p style="color: #666; line-height: 1.6;">The breadboard pattern and wires continue forever.</p>
+        </div>
+    </div>
+
+    <script>
+        let allDots = [];
+        let activeWires = [];
+        let occupiedDots = new Set(); // Track which dots are in use
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#ff8000', '#8000ff', '#00ffff', '#ff0080', '#80ff00', '#0080ff', '#ff4000', '#40ff00', '#8040ff', '#ff8040'];
+        const maxWires = 15;
+        const minWires = 8;
+        
+        // Calculate all breadboard dot positions (viewport-based for fixed wires)
+        function calculateDots() {
+            const gridSize = 80;
+            const dotPositions = [
+                [20, 20], [60, 20], [20, 60], [60, 60]
+            ];
+            
+            const containerWidth = window.innerWidth;
+            const containerHeight = window.innerHeight;
+            const dotsPerRow = Math.ceil(containerWidth / gridSize);
+            const dotsPerCol = Math.ceil(containerHeight / gridSize);
+            
+            allDots = [];
+            for (let row = 0; row < dotsPerCol; row++) {
+                for (let col = 0; col < dotsPerRow; col++) {
+                    for (let dotPattern of dotPositions) {
+                        allDots.push([
+                            col * gridSize + dotPattern[0],
+                            row * gridSize + dotPattern[1]
+                        ]);
+                    }
+                }
+            }
+        }
+        
+        // Get dot key for tracking
+        function getDotKey(dot) {
+            return `${dot[0]},${dot[1]}`;
+        }
+        
+        // Create a single wire connection with single animation
+        function createWire() {
+            const container = document.getElementById('wire-container');
+            const svg = document.getElementById('wire-svg');
+            
+            // Find available dots (not occupied by other wires)
+            const availableDots = allDots.filter(dot => !occupiedDots.has(getDotKey(dot)));
+            if (availableDots.length < 2) return null;
+            
+            // Pick two nearby available dots
+            let startDot, endDot, attempts = 0;
+            
+            do {
+                startDot = availableDots[Math.floor(Math.random() * availableDots.length)];
+                const nearbyDots = availableDots.filter(dot => {
+                    if (dot === startDot) return false;
+                    const distance = Math.abs(dot[0] - startDot[0]) + Math.abs(dot[1] - startDot[1]);
+                    return distance < 300;
+                });
+                
+                if (nearbyDots.length > 0) {
+                    endDot = nearbyDots[Math.floor(Math.random() * nearbyDots.length)];
+                    break;
+                }
+                attempts++;
+            } while (attempts < 20);
+            
+            if (!endDot || startDot === endDot) return null;
+            
+            // Mark dots as occupied
+            const startKey = getDotKey(startDot);
+            const endKey = getDotKey(endDot);
+            occupiedDots.add(startKey);
+            occupiedDots.add(endKey);
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const wireDots = [];
+            
+            // Create start dot marker
+            const startDotElement = document.createElement('div');
+            startDotElement.className = 'wire-dot start';
+            startDotElement.style.left = startDot[0] + 'px';
+            startDotElement.style.top = startDot[1] + 'px';
+            startDotElement.style.background = color;
+            container.appendChild(startDotElement);
+            wireDots.push(startDotElement);
+            
+            // Create end dot marker
+            const endDotElement = document.createElement('div');
+            endDotElement.className = 'wire-dot end';
+            endDotElement.style.left = endDot[0] + 'px';
+            endDotElement.style.top = endDot[1] + 'px';
+            endDotElement.style.background = color;
+            container.appendChild(endDotElement);
+            wireDots.push(endDotElement);
+            
+            // Create single SVG path for wire (L-shaped)
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('class', 'wire-line');
+            path.setAttribute('stroke', color);
+            
+            // Create L-shaped path: start -> corner -> end
+            const pathData = `M ${startDot[0]} ${startDot[1]} L ${endDot[0]} ${startDot[1]} L ${endDot[0]} ${endDot[1]}`;
+            path.setAttribute('d', pathData);
+            
+            svg.appendChild(path);
+            
+            // Single animation from start to end
+            setTimeout(() => {
+                path.classList.add('connected');
+            }, 100);
+            
+            activeWires.push({
+                path: path, 
+                dots: wireDots,
+                color: color, 
+                startKey: startKey, 
+                endKey: endKey
+            });
+            return path;
+        }
+        
+        // Remove a random wire
+        function removeWire() {
+            if (activeWires.length === 0) return;
+            
+            const randomIndex = Math.floor(Math.random() * activeWires.length);
+            const wireData = activeWires[randomIndex];
+            
+            // Free up the occupied dots
+            occupiedDots.delete(wireData.startKey);
+            occupiedDots.delete(wireData.endKey);
+            
+            // Animate removal (reverse the path)
+            wireData.path.classList.remove('connected');
+            
+            // Remove path and dots after animation
+            setTimeout(() => {
+                if (wireData.path.parentNode) {
+                    wireData.path.parentNode.removeChild(wireData.path);
+                }
+                wireData.dots.forEach(dot => {
+                    if (dot.parentNode) {
+                        dot.parentNode.removeChild(dot);
+                    }
+                });
+                activeWires.splice(randomIndex, 1);
+            }, 1500);
+        }
+        
+        // Real-time wire management
+        function manageWires() {
+            const currentWireCount = activeWires.length;
+            
+            // More aggressive wire management
+            if (currentWireCount < minWires) {
+                // Always add if below minimum
+                createWire();
+            } else if (currentWireCount < maxWires && Math.random() > 0.3) {
+                // High chance to add more wires
+                createWire();
+            } else if (currentWireCount > minWires && Math.random() > 0.4) {
+                // Regular chance to remove wires
+                removeWire();
+            }
+            
+            // Sometimes add multiple wires at once
+            if (Math.random() > 0.8 && currentWireCount < maxWires - 2) {
+                setTimeout(() => createWire(), 500);
+            }
+        }
+        
+        // Initialize
+        function init() {
+            calculateDots();
+            
+            // Create initial wires
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => createWire(), i * 200);
+            }
+            
+            // Start real-time updates (faster)
+            setInterval(manageWires, 1800);
+        }
+        
+        // Terminal window controls
+        let terminalState = 'normal'; // 'normal', 'minimized', 'fullscreen'
+        
+        function closeTerminal() {
+            const terminal = document.querySelector('.terminal-container');
+            terminal.classList.add('hidden');
+            terminalState = 'closed';
+        }
+        
+        function minimizeTerminal() {
+            const terminal = document.querySelector('.terminal-container');
+            if (terminalState === 'minimized') {
+                // Restore to normal
+                terminal.classList.remove('minimized', 'fullscreen');
+                terminalState = 'normal';
+            } else {
+                // Minimize
+                terminal.classList.remove('fullscreen');
+                terminal.classList.add('minimized');
+                terminalState = 'minimized';
+            }
+        }
+        
+        function toggleFullscreen() {
+            const terminal = document.querySelector('.terminal-container');
+            if (terminalState === 'fullscreen') {
+                // Restore to normal
+                terminal.classList.remove('fullscreen', 'minimized');
+                terminalState = 'normal';
+            } else {
+                // Go fullscreen
+                terminal.classList.remove('minimized');
+                terminal.classList.add('fullscreen');
+                terminalState = 'fullscreen';
+            }
+        }
+        
+        // ESP32 Boot sequence animation
+        function generateBootSequence() {
+            const resetTypes = ["0x1 (POWERON_RESET)", "0x10 (RTCWDT_RTC_RESET)", "0x5 (DEEPSLEEP_RESET)"];
+            const bootModes = ["0x13 (SPI_FAST_FLASH_BOOT)", "0x12 (SPI_FLASH_BOOT)", "0x17 (GENERIC_SPI_SF_BOOT)"];
+            const configValues = ["0", "188", "271", "384"];
+            const spiwpValues = ["0xee", "0xff", "0x00", "0xf0"];
+            const clockDivs = ["1", "2", "4", "8"];
+            const loadAddresses = [
+                [`0x3fff${Math.floor(Math.random() * 16).toString(16).padStart(4, '0')}`, Math.floor(Math.random() * 2000 + 1000)],
+                [`0x4007${Math.floor(Math.random() * 16).toString(16).padStart(4, '0')}`, Math.floor(Math.random() * 5000 + 10000)],
+                [`0x4008${Math.floor(Math.random() * 16).toString(16).padStart(4, '0')}`, Math.floor(Math.random() * 1000 + 3000)]
+            ];
+            const entryPoint = `0x40080${Math.floor(Math.random() * 16).toString(16)}${Math.floor(Math.random() * 16).toString(16)}0`;
+            
+            return [
+                `rst:${resetTypes[Math.floor(Math.random() * resetTypes.length)]},boot:${bootModes[Math.floor(Math.random() * bootModes.length)]}`,
+                `configsip: ${configValues[Math.floor(Math.random() * configValues.length)]}, SPIWP:${spiwpValues[Math.floor(Math.random() * spiwpValues.length)]}`,
+                `clk_drv:0x${Math.floor(Math.random() * 256).toString(16).padStart(2, '0')},q_drv:0x${Math.floor(Math.random() * 256).toString(16).padStart(2, '0')},d_drv:0x${Math.floor(Math.random() * 256).toString(16).padStart(2, '0')},cs0_drv:0x${Math.floor(Math.random() * 256).toString(16).padStart(2, '0')},hd_drv:0x${Math.floor(Math.random() * 256).toString(16).padStart(2, '0')},wp_drv:0x${Math.floor(Math.random() * 256).toString(16).padStart(2, '0')}`,
+                `mode:DIO, clock div:${clockDivs[Math.floor(Math.random() * clockDivs.length)]}`,
+                `load:${loadAddresses[0][0]},len:${loadAddresses[0][1]}`,
+                `load:${loadAddresses[1][0]},len:${loadAddresses[1][1]}`,
+                `load:${loadAddresses[2][0]},len:${loadAddresses[2][1]}`,
+                `entry ${entryPoint}`,
+                "",
+                "===============================================",
+                "",
+                "            Name: Darshan Savaliya",
+                "",
+                "===============================================",
+                "",
+                "System initialized successfully.",
+                "Ready for operation...",
+                ""
+            ];
+        }
+
+        let bootSequence = [];
+        let currentLineIndex = 0;
+        let currentCharIndex = 0;
+        let isTyping = false;
+
+        function typeText(text, callback, speed = 10) {
+            if (currentCharIndex < text.length) {
+                const outputElement = document.getElementById('terminal-output');
+                outputElement.textContent += text[currentCharIndex];
+                currentCharIndex++;
+                setTimeout(() => typeText(text, callback, speed), speed);
+            } else {
+                if (callback) callback();
+            }
+        }
+
+        function addNewLine() {
+            const outputElement = document.getElementById('terminal-output');
+            outputElement.textContent += '\n';
+        }
+
+        function processNextLine() {
+            if (currentLineIndex < bootSequence.length) {
+                const currentLine = bootSequence[currentLineIndex];
+                
+                if (currentLine === '') {
+                    addNewLine();
+                    currentLineIndex++;
+                    setTimeout(processNextLine, 100);
+                } else {
+                    isTyping = true;
+                    currentCharIndex = 0;
+                    
+                    let typingSpeed = 1;
+                    if (currentLine.includes("Name: Darshan Savaliya")) {
+                        typingSpeed = 50;
+                    } else if (currentLine.includes("===")) {
+                        typingSpeed = 15;
+                    }
+                    
+                    typeText(currentLine, () => {
+                        addNewLine();
+                        currentLineIndex++;
+                        isTyping = false;
+                        
+                        let delay = 10;
+                        if (currentLine.includes("Name: Darshan Savaliya")) {
+                            delay = 1000;
+                        } else if (currentLine.includes("===")) {
+                            delay = 200;
+                        }
+                        
+                        setTimeout(processNextLine, delay);
+                    }, typingSpeed);
+                }
+            } else {
+                startCountdown();
+            }
+        }
+
+        function clearTerminal() {
+            const outputElement = document.getElementById('terminal-output');
+            outputElement.textContent = '';
+        }
+
+        function startCountdown() {
+            let countdownValue = 8;
+            
+            function updateCountdown() {
+                const outputElement = document.getElementById('terminal-output');
+                const lines = outputElement.textContent.split('\n');
+                if (lines[lines.length - 1].includes('Restarting in')) {
+                    lines.pop();
+                    outputElement.textContent = lines.join('\n');
+                }
+                
+                if (countdownValue > 0) {
+                    outputElement.textContent += `\nRestarting in ${countdownValue}...`;
+                    countdownValue--;
+                    setTimeout(updateCountdown, 1000);
+                } else {
+                    startBootSequence();
+                }
+            }
+            
+            updateCountdown();
+        }
+
+        function startBootSequence() {
+            clearTerminal();
+            currentLineIndex = 0;
+            currentCharIndex = 0;
+            
+            bootSequence = generateBootSequence();
+            
+            setTimeout(() => {
+                processNextLine();
+            }, 200);
+        }
+        
+        // Initialize wires for a specific section
+        function initSectionWires(sectionNumber) {
+            const container = document.getElementById(`wire-container-${sectionNumber}`);
+            const svg = document.getElementById(`wire-svg-${sectionNumber}`);
+            const sectionElement = container.closest('.page-section');
+            
+            if (!container || !svg || !sectionElement) return;
+            
+            // Calculate dots for this specific section
+            const rect = sectionElement.getBoundingClientRect();
+            const sectionTop = sectionElement.offsetTop;
+            const gridSize = 80;
+            const dotPositions = [[20, 20], [60, 20], [20, 60], [60, 60]];
+            
+            const dotsPerRow = Math.ceil(window.innerWidth / gridSize);
+            const dotsPerCol = Math.ceil(window.innerHeight / gridSize);
+            
+            const sectionDots = [];
+            for (let row = 0; row < dotsPerCol; row++) {
+                for (let col = 0; col < dotsPerRow; col++) {
+                    for (let dotPattern of dotPositions) {
+                        sectionDots.push([
+                            col * gridSize + dotPattern[0],
+                            row * gridSize + dotPattern[1]
+                        ]);
+                    }
+                }
+            }
+            
+            // Create wires for this section
+            const numWires = 8 + Math.floor(Math.random() * 7); // 8-14 wires
+            const sectionOccupiedDots = new Set();
+            
+            for (let i = 0; i < numWires; i++) {
+                setTimeout(() => {
+                    createSectionWire(container, svg, sectionDots, sectionOccupiedDots, sectionNumber);
+                }, i * 300);
+            }
+        }
+        
+        // Create wire for a specific section
+        function createSectionWire(container, svg, sectionDots, sectionOccupiedDots, sectionNumber) {
+            const availableDots = sectionDots.filter(dot => !sectionOccupiedDots.has(getDotKey(dot)));
+            if (availableDots.length < 2) return;
+            
+            // Pick two nearby dots
+            const startDot = availableDots[Math.floor(Math.random() * availableDots.length)];
+            const nearbyDots = availableDots.filter(dot => {
+                if (dot === startDot) return false;
+                const distance = Math.abs(dot[0] - startDot[0]) + Math.abs(dot[1] - startDot[1]);
+                return distance < 300;
+            });
+            
+            if (nearbyDots.length === 0) return;
+            const endDot = nearbyDots[Math.floor(Math.random() * nearbyDots.length)];
+            
+            // Mark dots as occupied
+            sectionOccupiedDots.add(getDotKey(startDot));
+            sectionOccupiedDots.add(getDotKey(endDot));
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            // Create start and end dots
+            const startDotElement = document.createElement('div');
+            startDotElement.className = 'wire-dot start';
+            startDotElement.style.left = startDot[0] + 'px';
+            startDotElement.style.top = startDot[1] + 'px';
+            startDotElement.style.background = color;
+            container.appendChild(startDotElement);
+            
+            const endDotElement = document.createElement('div');
+            endDotElement.className = 'wire-dot end';
+            endDotElement.style.left = endDot[0] + 'px';
+            endDotElement.style.top = endDot[1] + 'px';
+            endDotElement.style.background = color;
+            container.appendChild(endDotElement);
+            
+            // Create SVG path
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('class', 'wire-line');
+            path.setAttribute('stroke', color);
+            
+            const pathData = `M ${startDot[0]} ${startDot[1]} L ${endDot[0]} ${startDot[1]} L ${endDot[0]} ${endDot[1]}`;
+            path.setAttribute('d', pathData);
+            
+            svg.appendChild(path);
+            
+            setTimeout(() => {
+                path.classList.add('connected');
+            }, 100);
+        }
+        
+        // Intersection Observer to trigger wire creation when sections come into view
+        function setupSectionObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionElement = entry.target;
+                        const sectionNumber = sectionElement.querySelector('[id*="wire-container-"]').id.split('-')[2];
+                        
+                        if (!sectionElement.hasAttribute('data-wires-initialized')) {
+                            initSectionWires(sectionNumber);
+                            sectionElement.setAttribute('data-wires-initialized', 'true');
+                        }
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            document.querySelectorAll('.page-section').forEach(section => {
+                observer.observe(section);
+            });
+        }
+        
+        // Start when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            calculateDots();
+            startBootSequence();
+            setupSectionObserver();
+            
+            // Initialize first section immediately
+            initSectionWires(1);
+            
+            // Add window control functionality
+            const closeBtn = document.getElementById('close-btn');
+            const minimizeBtn = document.getElementById('minimize-btn');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            
+            closeBtn.addEventListener('click', closeTerminal);
+            minimizeBtn.addEventListener('click', minimizeTerminal);
+            fullscreenBtn.addEventListener('click', toggleFullscreen);
+        });
+        
+        // Recalculate on resize
+        window.addEventListener('resize', () => {
+            calculateDots();
+        });
+    </script>
+</body>
+</html>

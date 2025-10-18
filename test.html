@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            color: #000;
+        }
+        
+        .test-background {
+            min-height: 100vh;
+            background: 
+                radial-gradient(circle at 20px 20px, #000 2px, transparent 2px),
+                radial-gradient(circle at 60px 20px, #000 2px, transparent 2px),
+                radial-gradient(circle at 20px 60px, #000 2px, transparent 2px),
+                radial-gradient(circle at 60px 60px, #000 2px, transparent 2px),
+                #fff;
+            background-size: 80px 80px;
+            position: relative;
+        }
+        
+        .test-terminal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 75%;
+            height: 50vh;
+            background: #1e1e1e;
+            border-radius: 8px;
+            border: 2px solid #333;
+            color: #00ff00;
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-background">
+        <div class="test-terminal">
+            <h1>TEST - If you can see this, CSS is working</h1>
+            <p>Breadboard background should show black dots</p>
+            <p>Terminal should be dark with green text</p>
+        </div>
+    </div>
+</body>
+</html>
