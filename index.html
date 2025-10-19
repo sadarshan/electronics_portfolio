@@ -340,11 +340,31 @@
                     isTyping = true;
                     currentCharIndex = 0;
                     
-                    let typingSpeed = 5; // Fast output by default
-                    if (currentLine.includes('$')) {
-                        typingSpeed = 30; // Faster command typing
-                    } else if (currentLine.includes('====')) {
-                        typingSpeed = 15; // Medium speed for headers
+                    // Check if this line contains a prompt
+                    if (currentLine.includes('<b>darshan@portfolio:~$</b>')) {
+                        // For prompt lines, add prompt instantly, then type the command
+                        const promptEnd = currentLine.indexOf('</b>') + 4;
+                        const prompt = currentLine.substring(0, promptEnd);
+                        const command = currentLine.substring(promptEnd);
+                        
+                        // Add prompt instantly
+                        const outputElement = document.getElementById('terminal-output');
+                        outputElement.innerHTML += prompt;
+                        
+                        // Type the command part with animation
+                        currentCharIndex = promptEnd;
+                        typeText(currentLine, () => {
+                            addNewLine();
+                            currentLineIndex++;
+                            isTyping = false;
+                            setTimeout(processNextLine, 300);
+                        }, 30); // Typing speed for commands
+                        return; // Exit early to use the custom handling above
+                    }
+                    
+                    let typingSpeed = 1; // Instant for output by default
+                    if (currentLine.includes('====')) {
+                        typingSpeed = 8; // Medium speed for headers
                     }
                     
                     typeText(currentLine, () => {
@@ -385,6 +405,10 @@
         }
 
         function enableInteractiveMode() {
+            // Add helpful message before showing input
+            const outputElement = document.getElementById('terminal-output');
+            outputElement.innerHTML += '<span style="color: #888888; font-style: italic;">type your commands here</span>\n';
+            
             // Show the input line
             const terminalInputLine = document.querySelector('.terminal-input-line');
             const terminalInput = document.getElementById('terminal-input');
@@ -402,6 +426,14 @@
                 terminalHistory.push(trimmedCommand);
             }
             historyIndex = terminalHistory.length;
+            
+            // Remove the current prompt and replace with command line
+            const currentContent = outputElement.innerHTML;
+            const lastPromptIndex = currentContent.lastIndexOf('<b>darshan@portfolio:~$</b> ');
+            if (lastPromptIndex !== -1) {
+                const beforePrompt = currentContent.substring(0, lastPromptIndex);
+                outputElement.innerHTML = beforePrompt;
+            }
             
             // Add the command to output with bold prompt
             outputElement.innerHTML += `<b>darshan@portfolio:~$</b> ${trimmedCommand}\n`;
